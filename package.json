@@ -1,7 +1,7 @@
 {
-  "name": "vuex-orm-localforage",
+  "name": "vuex-orm-cordova",
   "version": "0.3.2",
-  "description": "Vuex-ORM Plugin to sync the data against an indexedDB using localforage.",
+  "description": "Vuex-ORM Plugin to sync the data against a Cordova SQLite DB using localforage.",
   "main": "dist/vuex-orm-localforage.js",
   "module": "src/index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "test": "jest"
   },
   "repository": {
-    "type": "git+https://github.com/eldomagan/vuex-orm-localforage.git"
+    "type": "git+https://github.com/stxphxn/vuex-orm-cordova.git"
   },
   "keywords": [
     "vue",
@@ -20,7 +20,9 @@
     "vuex-orm",
     "vuex-orm-plugin",
     "localforage",
-    "localstorage"
+    "localstorage",
+    "cordova",
+    "SQLite"
   ],
   "author": "Eldo Magan <magan.eldo@gmail.com>",
   "license": "MIT",
