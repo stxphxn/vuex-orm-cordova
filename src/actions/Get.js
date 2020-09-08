@@ -14,7 +14,7 @@ export default class Get extends Action {
 
     if (id) {
       return model.$localStore.getItem(id)
-        .then(record => dispatch('insertOrUpdate', {
+        .then((record) => dispatch('insertOrUpdate', {
           data: record,
         }));
     }

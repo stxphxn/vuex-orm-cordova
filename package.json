@@ -31,7 +31,8 @@
   },
   "dependencies": {
     "deepmerge": "^4.2.2",
-    "localforage": "^1.7.3"
+    "localforage": "^1.7.3",
+    "localforage-cordovasqlitedriver": "^1.8.0"
   },
   "devDependencies": {
     "@babel/core": "^7.5.5",

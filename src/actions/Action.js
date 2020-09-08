@@ -1,5 +1,6 @@
 import deepmerge from 'deepmerge';
 import localforage from 'localforage';
+import cordovaSQLiteDriver from 'localforage-cordovasqlitedriver';
 import Context from '../common/context';
 
 export default class Action {
@@ -14,6 +15,16 @@ export default class Action {
       Context.getInstance().options.localforage,
       model.localforage,
     ));
+
+    model.$localStore.defineDriver(cordovaSQLiteDriver).then(() => {
+      model.$localStore.setDriver([
+        cordovaSQLiteDriver._driver,
+        localforage.INDEXEDDB,
+        localforage.WEBSQL,
+        localforage.LOCALSTORAGE,
+      ]);
+      console.log(`setDriver:${localforage.driver()}`);
+    });
 
     return model;
   }
